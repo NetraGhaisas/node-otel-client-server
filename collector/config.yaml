@@ -6,8 +6,12 @@ receivers:
       http:
         endpoint: 0.0.0.0:4318
 exporters:
+  file:
+    path: ./otel-data.json
   debug:
     verbosity: detailed
+
+
 service:
   pipelines:
     traces:
